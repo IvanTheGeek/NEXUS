@@ -1,0 +1,112 @@
+[ontology]
+name = "NEXUS Base Ontology"
+version = "0.1.0"
+description = "Minimal NEXUS ontology just above graph theory."
+
+[[categories]]
+id = "nexus.category.structure"
+label = "Structure"
+definition = "Defines what exists as first-class things in the graph."
+
+[[categories]]
+id = "nexus.category.relation"
+label = "Relation"
+definition = "Defines how structural elements connect."
+
+[[categories]]
+id = "nexus.category.meta"
+label = "Meta"
+definition = "Defines how structure is interpreted."
+
+[[categories]]
+id = "nexus.category.classification"
+label = "Classification"
+definition = "Defines labels used for organization and tooling."
+
+[[roles]]
+id = "nexus.role.interface"
+label = "Interface"
+definition = "A context-relative role at a boundary."
+
+[[roles]]
+id = "nexus.role.command"
+label = "Command"
+definition = "A software-lens role representing requested change."
+
+[[roles]]
+id = "nexus.role.event"
+label = "Event"
+definition = "A software-lens role representing recorded fact."
+
+[[roles]]
+id = "nexus.role.view"
+label = "View"
+definition = "A software-lens role representing a derived read artifact."
+
+[[roles]]
+id = "nexus.role.processor"
+label = "Processor"
+definition = "A role representing active processing within a context or lens."
+
+[[domains]]
+id = "nexus.domain.software-development"
+label = "Software Development"
+definition = "A coherent software-oriented meaning space."
+
+[[domains]]
+id = "nexus.domain.knowledge"
+label = "Knowledge"
+definition = "A coherent knowledge-oriented meaning space."
+
+[[meanings]]
+id = "nexus.meaning.software.event"
+domain_id = "nexus.domain.software-development"
+label = "Event"
+definition = "A recorded fact that something occurred."
+
+[[meanings]]
+id = "nexus.meaning.software.view"
+domain_id = "nexus.domain.software-development"
+label = "View"
+definition = "A derived read artifact shaped for a consumer."
+
+[[meanings]]
+id = "nexus.meaning.knowledge.fact"
+domain_id = "nexus.domain.knowledge"
+label = "Fact"
+definition = "A knowledge-domain semantic interpretation for a node."
+
+[[lenses]]
+id = "nexus.lens.node"
+label = "Node Lens"
+definition = "Reveals nodes while hiding most relation detail."
+
+[[lenses]]
+id = "nexus.lens.behavior"
+label = "Behavior Lens"
+definition = "Reveals behavior-oriented relation detail."
+
+[[laws]]
+id = "nexus.law.node-may-relate"
+label = "A node may relate to other nodes."
+category = "Relation"
+
+[[laws]]
+id = "nexus.law.multiple-independent-derivations"
+label = "A node may have multiple independent derivations."
+category = "Relation"
+
+[[laws]]
+id = "nexus.law.boundary-separates-contexts"
+label = "A boundary separates contexts while allowing handoff."
+category = "Structure"
+
+[[laws]]
+id = "nexus.law.lens-reveals-partial-graph"
+label = "A lens reveals only part of the graph."
+category = "Meta"
+
+[[laws]]
+id = "nexus.law.meaning-does-not-alter-structure"
+label = "Meaning does not alter structure."
+category = "Meta"
